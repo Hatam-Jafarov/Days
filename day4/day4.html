@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DAY4 | Paint the Boxes</title>
+</head>
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+html{
+	margin: 0 auto;
+	padding: 0;
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	background-color: #ADA5AF;
+}
+h1{
+	width: auto;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 36px;
+	color: #3A3A3A;
+	text-shadow: 0 1px 10px #FFF;
+}
+#FullArea{
+	display: block;
+	width: 800px;
+	height: auto;
+	background-color: #ffffe0;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	box-shadow: 0 0 15px #000;
+}
+#color-area{
+	display: inline-block;
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+.colors1{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+	border: 1px solid #FFDB00;
+	cursor: pointer;
+	margin-left: 40px;
+	margin-top: 40px;
+}
+.colors2{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #FF0800;
+	border: 1px solid #D40000;
+	cursor: pointer;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+.colors3{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: yellow;
+	border: 1px solid #000;
+	cursor: pointer;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+.colors4{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #FFF;
+	border: 1px solid #50BFFF;
+	cursor: pointer;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+.choosen-color{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border: 1px solid #000;
+	cursor: pointer;
+	margin-left: 40px;
+}
+#box-area{
+	display: inline-block;
+	height: 100%;
+	width: calc(80% - 40px);
+	margin-top: 40px;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	background-color: #FFF;
+}
+.div1-area{
+	display: block;
+	width: 100%;
+	height: 120px;
+}
+.div1{
+	display: inline-block;
+	float: left;
+	width: 25%;
+	background-color: #ffffe0;
+	height: 100%;
+	border: 2px solid #000;
+	box-sizing: border-box;
+}
+.div2-area{
+	display: block;
+	width: 100%;
+	height: 180px;
+}
+
+.text{
+	text-align: center;
+	font-weight: 600;
+	font-size: 18px;
+	margin-top: 30px;
+	margin-bottom: 5px;
+}
+</style>
+<body>
+
+<h1>Rəngi götür və qutuları boya :)</h1>
+
+<div id="FullArea">
+	<div id="color-area">
+		<div class="colors1"></div>
+		<div class="colors2"></div>
+		<div class="colors3"></div>
+		<div class="colors4"></div>
+
+			<div class="text">Seçilmiş rəng:</div>
+		<div class="choosen-color"></div>
+	</div>
+
+	<div id="box-area">
+		<div class="div1-area">
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+		</div>
+		<div class="div2-area">
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+		</div>
+		<div class="div1-area">
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+		</div>
+		<div class="div2-area">
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+var color;
+$(document).ready(function(){
+	$('.colors1').click(function(){
+		color = $('.colors1').css("background-color");
+		$('.choosen-color').css("background-color", color);
+	});
+	$('.colors2').click(function(){
+		color = $('.colors2').css("background-color");
+		$('.choosen-color').css("background-color", color);
+	});
+	$('.colors3').click(function(){
+		color = $('.colors3').css("background-color");
+		$('.choosen-color').css("background-color", color);
+	});
+	$('.colors4').click(function(){
+		color = $('.colors4').css("background-color");
+		$('.choosen-color').css("background-color", color);
+	});
+
+	$('.div1').click(function(){
+		$(this).css("background-color",color);
+	});
+})
+
+
+</script>
+
+
+
+</body>
+</html>

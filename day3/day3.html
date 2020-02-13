@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DAY-3 | Random BG Color</title>
+</head>
+
+<style type="text/css">
+	
+html{
+	margin: 0 auto;
+	padding: 0;
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	background-color: #f1f1f1;
+}
+button{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	height: 100px;
+	background-color: #f90;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	outline: none;
+	border: none;
+	font-size: 28px;
+	text-transform: uppercase;
+	color: #FFF;
+	border-radius: 5px;
+}
+button:hover{
+	cursor: pointer;
+	border: 2px solid #f1f1f1;
+	background-color: #f00;
+	box-shadow: 10px 10px 100px #000;
+	color: #FFF;
+}
+
+</style>
+<body>
+
+
+<button>Mənə kliklə!</button>
+
+
+
+
+<script type="text/javascript">
+
+
+var color = '#000';
+
+function RandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+
+document.getElementsByTagName('button')[0].addEventListener("click",function(){
+	document.getElementsByTagName('body')[0].style.backgroundColor = RandomColor();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

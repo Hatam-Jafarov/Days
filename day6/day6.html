@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DAY6 | Day Tracker</title>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+<script src="jquery-3.4.1.min.js"></script>
+</head>
+<style type="text/css">
+html{
+	margin: 0 auto;
+	padding: 0;
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	background-color: #f6f8f8;
+}
+#week{
+	width: 700px;
+	height: 100px;
+	background-color: #104c91;
+	margin: 0 auto;
+	position: relative;
+}
+.days{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 100px;
+	text-align: center;
+	padding-top: 45px;
+	color: #EFC9AF;
+	font-size: 20px;
+	font-family: 'Sansita', sans-serif;
+}
+span{
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 100px;
+	height: 300px;
+	background-color: #104c91;
+	display: none;
+}
+span p{
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	padding-bottom: 10px;
+	font-family: 'Sansita', sans-serif;
+}
+#text{
+	display: block;
+	width: 100%;
+	height: 60px;
+	background-color: #EFC9AF;
+	text-align: center;
+	color: #104c91;
+	padding-top: 20px;
+	font-size: 36px;
+	margin-top: 200px;
+}
+</style>
+<body>
+
+<div id="week">
+	<div class="days" id="1">
+		Bazar <br> ertəsi
+		<span id="S1"><p>Bazar <br> ertəsi</p></span>
+	</div>
+	<div class="days" id="2">
+		Çərşənbə axşamı
+		<span id="S2"><p>Çərşənbə axşamı</p></span>
+	</div>
+	<div class="days" id="3">
+		Çərşənbə
+		<span id="S3"><p>Çərşənbə</p></span>
+	</div>
+	<div class="days" id="4">
+		Cümə axşamı
+		<span id="S4"><p>Cümə axşamı</p></span>
+	</div>
+	<div class="days" id="5">
+		Cümə
+		<span id="S5"><p>Cümə</p></span>
+	</div>
+	<div class="days" id="6">
+		Şənbə
+		<span id="S6"><p>Şənbə</p></span>
+	</div>
+	<div class="days" id="0">
+		Bazar
+		<span id="S0"><p>Bazar</p></span>
+	</div>
+</div>
+<div id="text">Bu gün bazardır!</div>
+
+<script type="text/javascript">
+
+var date = new Date();
+var day = date.getDay();
+var msg = ["Bu gün həftənin sonuncu günü yəni - Bazar günüdür!", "Bu gün Bazar ertəsidir!", "Bu gün Çərşənbə axşamıdır", "Bu gün Çərşənbədir!", "Bu gün Cümə axşamıdır!", "Bu gün Cümə günüdür! Sabahdan istirahət etmək olar :)", "Nəhayət rahat nəfəs almaq olar! Çünki bu gün Şənbədir!"];
+
+$('#text').text(msg[day]);
+$('#S' + (day)).css("display","block")
+
+</script>
+</body>
+</html>

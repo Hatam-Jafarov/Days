@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Box Shadowwwww</title>
+<meta charset="utf-8">
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+</head>
+html{
+	margin: 0 auto;
+	padding: 0;
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	background-color: #f1f1f1;
+}
+div{
+	width: 300px;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 40px;
+	background-color: #FFA781;
+	border-style: solid;
+  	border-color: #5B0E2D;
+  	border-width: 0;
+  	text-align: center;
+  	padding-top: 100px;
+  	font-size: 40px;
+  	cursor: pointer;
+  	user-select: none;
+}
+
+</style>
+<body>
+
+<div>Mənə Kliklə!</div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var num = 0;
+	$('div').click(function(){
+		num++;
+		$(this).css("border-width",num + "px")
+	})
+})
+
+
+
+
+</script>
+
+
+</body>
+</html>
